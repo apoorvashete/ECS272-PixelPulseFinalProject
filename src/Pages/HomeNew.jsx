@@ -1537,46 +1537,47 @@ const ScrollApp = () => {
           data-scroll-section
           style={{ height: "100vh" }}
         >
-          <h1
-            data-scroll
-            data-scroll-speed="5"
-            data-scroll-sticky // Attribute that enables the sticky scroll
-            data-scroll-target="#stick"
-          >
-            {/* Replace the placeholder text with your component */}
-            hi hi
-          </h1>
+          <div style={{ textAlign: "center" }}>
+            <img
+              src="src/Elements/gameover.gif"
+              alt="Game Over"
+              style={{
+                width: "100%",
+                height: "auto",
+                display: "block",
+                margin: "auto",
+              }}
+            ></img>
 
-          <p>other contents</p>
-          <p>other contents</p>
-          <p>other contents</p>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                marginTop: "30px",
+              }}
+            >
+              <img
+                src="src/Elements/runningsonic.gif"
+                alt="Running Sonic"
+                className="runningsonic"
+                style={{ height: "30vh" }}
+              ></img>
+              <img
+                src="src/Elements/runningmario.gif"
+                alt="Running Mario"
+                className="runningmario"
+                style={{ height: "30vh" }}
+              ></img>
+            </div>
+          </div>
         </section>
         <section
           ref={addSectionRef}
           id="stick"
           className="contents"
           data-scroll-section
-          style={{ height: "100vh" }}
-        >
-          <h1
-            data-scroll
-            data-scroll-speed="5"
-            data-scroll-sticky // Attribute that enables the sticky scroll
-            data-scroll-target="#stick"
-          >
-            <img
-              src="src/Elements/mario.png"
-              alt="Mario"
-              className="genremario"
-            />
-            {/* Replace the placeholder text with your component */}
-            hi hi
-          </h1>
-
-          <p>other contents</p>
-          <p>other contents</p>
-          <p>other contents</p>
-        </section>
+          style={{ height: "5vh" }}
+        ></section>
       </main>
     </LocomotiveScrollProvider>
   );

@@ -543,6 +543,36 @@ section {
   transform: translateY(-150vh);
 }
 
+@keyframes runningsonic {
+  0% {
+    left: -50vw;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.runningsonic {
+  position: absolute;
+  animation: runningsonic 7s linear infinite;
+}
+
+@keyframes runningmario {
+  0% {
+    left: -30vw;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.runningmario {
+  position: absolute;
+  animation: runningmario 6s linear infinite;
+}
+
+
+
 /* SCROLLING DO NOT EDIT */
 [data-scroll-direction="horizontal"] [data-scroll-section] {
   display: inline-block;
