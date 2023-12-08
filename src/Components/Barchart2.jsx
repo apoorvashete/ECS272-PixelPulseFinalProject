@@ -108,19 +108,28 @@ function Barchart2() {
 
       // Color scale
       const colors22 = [
-        "#8CB369", // olivine
-        "#F4E285", // flax yellow
-        "#F4A259", // sandy brown
-        "#5B8E7D", // viridian
-        "#BC4B51", //bittersweet shimmer red
-        "#E3D0D8", // pale purple
-        "#BCAC9B", // khakhi
-        "#D4EAC8", // light green
-        "#C94277", //pink
-        "#9CF6F6", // ice blue
-        "#09BC8A", //mint green
-        "#A599B5", //rose quartz
+        "#fd7f6f", // Warm Pink
+        "#7eb0d5", // Soft Blue
+        "#b2e061", // Light Green
+        "#bd7ebe", // Muted Purple
+        "#ffb55a", // Peach
+        "#ffee65", // Canary Yellow
+        "#beb9db", // Lavender Blue
+        "#fdcce5", // Pale Pink
+        "#8bd3c7", // Seafoam Green
+        "#f98e72", // Light Salmon
+        "#83a6d4", // Light Cornflower Blue
+        "#a9d70b", // Bright Lime
+        "#c27db0", // Orchid
+        "#ffbb42", // Yellow Orange
+        "#f5f06d", // Pastel Yellow
+        "#c5c4e1", // Soft Lilac
+        "#fec8d8", // Light Pink
+        "#74c7b8", // Medium Aquamarine
+        "#fbaa7f", // Melon
+        "#9dbcd4", // Pastel Blue
       ];
+
       const colorScale = d3.scaleOrdinal(colors22);
 
       // Define the filter
