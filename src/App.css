@@ -1,0 +1,607 @@
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.highlighted {
+  stroke: #f00; /* Example: red stroke */
+  stroke-width: 3px; /* Example: 3px stroke width */
+}
+
+.parent-highlighted {
+  fill: rgba(255, 255, 0, 0.5); /* Example: semi-transparent yellow fill */
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.container {
+  font-family: "Arial", sans-serif;
+  color: #333;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.tip-button {
+  background-color: #ffda00;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.op-class {
+  opacity: 0;
+}
+.fadeIn {
+  opacity: 1;
+  transition: opacity 5s;
+}
+
+.fadeInFast {
+  opacity: 1;
+  transition: opacity 3s;
+}
+.second-title {
+  font-size: 172;
+}
+.content {
+  background-color: #50504f;
+  margin: 20px 0;
+  padding: 40px 20px;
+}
+
+.intro-text {
+  margin-bottom: 30px;
+}
+
+.scroll-instruction {
+  font-size: 0.9em;
+  color: #888;
+}
+
+.contents {
+  height: 125vh;
+}
+
+/* NEED TO IMPROVE */
+/* mario character animation */
+@keyframes marioFloat {
+  0% {
+    transform: translateX(-55vw); /* Start off-screen */
+    opacity: 1;
+  }
+  10% {
+    transform: translateX(-20vw); /* move towards the right and stop */
+    opacity: 1;
+  }
+
+  55% {
+    transform: translateX(-20vw); /* move towards the right and stop */
+    opacity: 1;
+  }
+
+  /* dont change above */
+
+  60% {
+    transform: translateX(-20vw) translateY(-25vh); /* move upwards */
+    opacity: 1;
+  }
+
+  65% {
+    transform: translateX(-8vw) translateY(-35vh); /* move slight right up diagonal */
+    opacity: 1;
+  }
+
+  70% {
+    transform: translateX(-1vw) translateY(-30vh); /* move very slight down right diagonal, land on block */
+    opacity: 1;
+  }
+  75% {
+    transform: translateX(-1vw) translateY(-50vh); /* move upwards */
+    opacity: 1;
+  }
+
+  80% {
+    transform: translateX(8vw) translateY(-60vh); /* move diagonally towards cloud */
+    opacity: 1;
+  }
+  85% {
+    transform: translateX(18vw) translateY(-57vh); /* land on cloud */
+    opacity: 1;
+  }
+  90% {
+    transform: translateX(30vw) translateY(-57vh); /* go right for jump */
+    opacity: 1;
+  }
+  95% {
+    transform: translateX(30vw) translateY(-34vh); /* go down */
+    opacity: 1;
+  }
+  98% {
+    transform: translateX(45vw) translateY(-34vh); /* exit screen */
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(45vw) translateY(-34vh); /* exit screen */
+    opacity: 0;
+  }
+}
+
+/* -Y means move Up, Y means move Down,  -X means move to R , X means move to L */
+
+.mario {
+  position: absolute;
+  width: auto;
+  height: 30vh;
+  bottom: 16vh; /* Adjust as needed */
+  animation: marioFloat 30s ease-in-out forwards;
+}
+
+/* speech bubble animation */
+
+@keyframes speechbubble-fade {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+  54% {
+    opacity: 1;
+  }
+
+  55% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.speechbubble {
+  position: absolute;
+  top: -25vh;
+  width: 60vw;
+  height: 110vh;
+  bottom: 0%;
+  animation: speechbubble-fade 30s forwards;
+}
+
+.mario-walk {
+  position: absolute;
+  width: auto;
+  height: 30vh;
+  bottom: 530px; /* Adjust as needed */
+  /* animation: walk 0.5s linear infinite; */
+}
+
+@keyframes walk {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+}
+
+.title-textbox {
+  width: 30vw; /* Adjust width as needed */
+  height: 40vh; /* Adjust height as needed */
+  position: absolute; /* Use 'absolute' or 'fixed' positioning */
+  top: 5vh; /* Adjust to position vertically */
+  left: 26vw;
+  background-color: transparent;
+  text-align: center; /* Optional: Align text */
+  /* Add more styling as needed */
+}
+
+.title-subtitle {
+  font-size: 25px;
+  margin-bottom: 45vh;
+  font-family: "DotGothic16", sans-serif;
+}
+
+.title-subtitle {
+  overflow: hidden;
+  animation: typing 4s steps(300) forwards, blinkCursor 0.75s step-end infinite,
+    fadeOutText 30s ease forwards;
+}
+
+.button-textbox {
+  width: 30vw;
+  height: 20vh;
+  position: absolute;
+  top: 63vh;
+  left: 20vw;
+  background-color: transparent;
+  text-align: center;
+}
+
+.button-text {
+  font-size: 59px;
+  font-family: "M04_FATAL FURY BLACK";
+  color: #000000;
+  
+}
+
+.titlebox {
+  width: 70vw; /* Adjust width as needed */
+  height: 40vh; /* Adjust height as needed */
+  position: absolute; /* Use 'absolute' or 'fixed' positioning */
+  top: 5vh; /* Adjust to position vertically */
+
+  background-color: transparent;
+  text-align: center; /* Optional: Align text */
+  /* Add more styling as needed */
+}
+
+.button {
+  font-size: 61px;
+  margin-top: 60vh;
+  height: 90%;
+  left: 60vw;
+}
+
+/* Animation for title slide text to fade in and out */
+
+@keyframes fadeOutText {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 1;
+  }
+
+  55% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 920px;
+  }
+}
+
+@keyframes blinkCursor {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
+/* Moving cloud animation */
+@keyframes moveCloud {
+  0% {
+    left: -55vw;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.moving-cloud {
+  position: absolute;
+  top: 31vh; /* Adjust the vertical position as needed */
+  width: 17vw; /* Adjust the size of the cloud as needed */
+  animation: moveCloud 40s linear infinite;
+}
+
+/* Moving cloud animation */
+@keyframes moveCloudright {
+  0% {
+    right: -35vw;
+  }
+  100% {
+    right: 100%;
+  }
+}
+.cloud-right-to-left {
+  position: absolute;
+  top: 5vh; /* Adjust the vertical position as needed */
+  width: 17vw; /* Adjust the size of the cloud as needed */
+  animation: moveCloudright 40s linear infinite;
+}
+
+/* Rotating sun */
+@keyframes rotateSun {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotating-sun {
+  animation: rotateSun 2s linear infinite;
+  height: 100px;
+}
+
+/* top right */
+.sun1 {
+  position: relative;
+  top: -470px;
+  right: -1050px;
+}
+
+/* bottom centre */
+.sun2 {
+  position: relative;
+  top: 490px;
+  right: 100px;
+}
+
+/* top left */
+.sun3 {
+  position: relative;
+  top: -470px;
+  left: -620px;
+}
+
+/* mario animation for fun fact 1*/
+@keyframes mariofunfact {
+  0% {
+    transform: translateX(-20vw); /* Start off-screen */
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-2vw); /* move towards the right and stop */
+    opacity: 1;
+  }
+}
+
+.mario1 {
+  animation: mariofunfact 8s ease-in-out forwards;
+  height: 30vh;
+  width: auto;
+}
+
+/* background transition */
+section {
+  height: 100vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro {
+  background-color: black;
+}
+
+/* FIRST SLIDE */
+.container {
+  width: 100vw;
+  max-width: 100vw;
+  background-color: rgb(243, 202, 249);
+}
+
+.content {
+  width: 3000;
+  background-color: goldenrod;
+}
+
+#character {
+  background-color: rgb(71, 14, 64);
+  display: flex;
+  height: 100vh;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.sankey-chart {
+  position: relative; /* or static, depending on your layout needs */
+  overflow: hidden; /* Prevents any internal content from spilling out */
+  z-index: 1;
+}
+
+.genremario {
+  position: absolute;
+  width: auto;
+  height: 30vh;
+  bottom:10vh;
+  animation: mariogenre 10s ease-in-out forwards;
+  transform: scaleX(-1);
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  1% { opacity: 0; }
+}
+
+.blinking-text {
+  animation: blink 1s linear infinite;
+}
+
+@keyframes mariogenre {
+  0% {
+    transform: translateX(60vw) translateY(-20vh);
+  }
+  100% {
+    transform: translateX(35vw) translateY(-20vh); /* exit screen */
+  }
+}
+
+.speechbubble2 {
+  position: absolute;
+  width: auto;
+  height: 60vh;
+  left: 65vw;
+  bottom: 40vh;
+  animation: speechbubble2 30s forwards;
+}
+
+@keyframes speechbubble2 {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0;
+  }
+
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.small-bubbletext {
+  bottom: 520vh;
+}
+
+.slideshow-container {
+  width: 50%;
+  height: 50%;
+  position: relative;
+}
+
+.slides-show {
+  width: auto;
+  height: 100%;
+}
+
+.slideshow {
+  position: absolute;
+  width: auto;
+  height: 60vh;
+  left: 75vw;
+  top: 22vw;
+}
+
+.genremario[data-scroll-sticky] {
+  top: 50vh; /* Adjust this value as needed */
+  transform: translateY(-150vh);
+}
+
+/* SCROLLING DO NOT EDIT */
+[data-scroll-direction="horizontal"] [data-scroll-section] {
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+  height: 100%;
+}
+
+.c-scrollbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 11px;
+  height: 100%;
+  transform-origin: center right;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0;
+}
+
+.c-scrollbar:hover {
+  transform: scaleX(1.45);
+}
+
+.c-scrollbar:hover,
+.has-scroll-scrolling .c-scrollbar,
+.has-scroll-dragging .c-scrollbar {
+  opacity: 1;
+}
+
+[data-scroll-direction="horizontal"] .c-scrollbar {
+  width: 100%;
+  height: 10px;
+  top: auto;
+  bottom: 0;
+  transform: scaleY(1);
+}
+
+[data-scroll-direction="horizontal"] .c-scrollbar:hover {
+  transform: scaleY(1.3);
+}
+
+.c-scrollbar_thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.5;
+  width: 7px;
+  border-radius: 10px;
+  margin: 2px;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.has-scroll-dragging .c-scrollbar_thumb {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+[data-scroll-direction="horizontal"] .c-scrollbar_thumb {
+  right: auto;
+  bottom: 0;
+}
