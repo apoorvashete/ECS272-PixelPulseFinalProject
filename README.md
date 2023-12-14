@@ -43,3 +43,7 @@ Before you begin, ensure you have met the following requirements:
    Open [http://localhost:3000](http://localhost:3000) in your browser to see the app.
 
 For best results, view the dashboard with 75% zoom. 
+
+##Contributors
+- Apoorva Shete (apshete@ucdavis.edu)
+- Madhumita Venkatesh (mvenkat@ucdavis.edu)
