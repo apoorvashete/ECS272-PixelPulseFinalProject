@@ -44,8 +44,8 @@ Before you begin, ensure you have met the following requirements:
 
 For best results, view the dashboard with 75% zoom. 
 
-##Contributors
+###Contributors
 - Apoorva Shete (apshete@ucdavis.edu)
 - Madhumita Venkatesh (mvenkat@ucdavis.edu)
 
-Project done under the guidance of Professor K. Ma ( klma@ucdavis.edu) at University of California, Davis
+Project done under the guidance of Professor K. Ma ( klma@ucdavis.edu) at University of California, Davis.
